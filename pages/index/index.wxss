@@ -1,0 +1,54 @@
+.index .slide-image{
+  width: 750rpx;
+  height:350rpx;
+}
+.content-item{
+  margin-top:40rpx;
+}
+.content-item .title{
+  font-size:16px;
+  padding-left:20rpx;
+  border-left:2px solid #000;
+  line-height:24rpx;
+  height:24rpx;
+
+}
+.content-item .content{
+  margin-top:40rpx;
+  display:flex;
+  justify-content: space-between;
+}
+ .box-l .img{
+  width:230rpx;
+  height:300rpx;
+}
+.content .con-book{
+display: flex;
+justify-content: space-between;
+}
+.box-r{
+  margin-left:30rpx;
+  padding-bottom:20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
+}
+ .box-r .book-title{
+  font-size:16px;
+  color:#333;
+  float:right;
+}
+.box-r .book-desc {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+-webkit-line-clamp:3;
+  overflow:hidden;
+  line-height:1.5;
+  color:#444;
+  font-size:14px;
+}
+.box-r .author{
+  display:flex;
+  justify-content:space-between;
+  font-size:12px;
+}
