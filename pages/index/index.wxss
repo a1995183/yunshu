@@ -2,6 +2,16 @@
   width: 750rpx;
   height:350rpx;
 }
+.loading{
+  width: 250px;
+  height:250px;
+  position: fixed;
+  top:50%;
+  left:50%;
+  margin-left:-125px;
+  margin-top:-125px;
+}
+
 .content-item{
   margin-top:40rpx;
 }
@@ -18,25 +28,24 @@
   display:flex;
   justify-content: space-between;
 }
- .box-l .img{
-  width:230rpx;
-  height:300rpx;
-}
-.content .con-book{
-display: flex;
-justify-content: space-between;
-}
 .box-r{
+  float: right;
   margin-left:30rpx;
   padding-bottom:20rpx;
   display: flex;
   flex-direction: column;
   justify-content:space-between;
 }
+ .box-l .img{
+  width:230rpx;
+  height:300rpx;
+  float: left;
+}
+
  .box-r .book-title{
   font-size:16px;
   color:#333;
-  float:right;
+ 
 }
 .box-r .book-desc {
   display: -webkit-box;

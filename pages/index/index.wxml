@@ -22,6 +22,8 @@ autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
              <view class="box-l">
                       <view class='con-book' bindtap="jumpBook" data-id="{{item._id}}">
                     <image   class="img" src='{{item.img}}'></image>
+                    
+            </view>
               </view>
               <view class="box-r">
                      <view>
@@ -38,8 +40,8 @@ autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
                         </view>
                       </view>
 
-            </view>
           </view>
+          
           </view>
         </view>
     </view>

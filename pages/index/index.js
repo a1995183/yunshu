@@ -11,19 +11,17 @@ Page({
     autoplay: true,
     interval: 2000,
     duration: 1000,
-    isLoading:true
+    isLoading:false
   },
   onLoad() {
     this.getData();
     this.getContent();
-    this.setData({
-      isLoading: true
-    })
   },
   getData(){
-  
+    this.setData({
+      isLoading: true
+    });
     fetch.get('/swiper').then(res=>{
-    
     this.setData({
       swiperData:res.data,
       isLoading: false,
