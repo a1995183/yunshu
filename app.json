@@ -1,13 +1,38 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
     "pages/details/details",
     "pages/catalog/catalog",
-    "pages/book/book"
+    "pages/book/book",
+    "pages/personalCenter/personalCenter",
+    "pages/myStudy/myStudy",
+    "components/loadingBottom/loadingBottom"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarTitleText": "云书",
-    "navigationBarBackgroundColor": "#87ceeb","navigationBarTextStyle":"black"
+    "navigationBarBackgroundColor": "#87ceeb",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar":{
+    "list":[
+      {"pagePath":"pages/index/index",
+    "text":"云书",
+    "iconPath":"/static/icon/home.png",
+    "selectedIconPath":"/static/icon/home_active.png"},
+   {
+    "pagePath": "pages/myStudy/myStudy",
+    "text": "阅读记录",
+    "iconPath": "/static/icon/read.png",
+    "selectedIconPath": "/static/icon/read_active.png"
+  },
+    {
+          "pagePath": "pages/personalCenter/personalCenter",
+          "text": "个人中心",
+          "iconPath": "/static/icon/person.png",
+          "selectedIconPath": "/static/icon/person_active.png"
+        }
+        
+      ]
   }
 }

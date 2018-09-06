@@ -31,5 +31,49 @@ isLoading:false
 wx.navigateTo({
   url:`/pages/catalog/catalog?id=${this.data.bookId}`
 })
+  },
+  handleCollect(){
+    fetch.post('/collection',{
+      bookId:this.data.bookId
+    }).then(res=>{
+      if(res.code==200){
+        wx.showToast({
+          title:"收藏成功",
+          icon:'success',
+          duration:1000
+        })
+        let bookData={...this.data.bookData}
+        bookData.isCollect=1
+        this.setData({
+          bookData:bookData
+        })
+      }else{
+        let arr=[this.data.bookId];
+        console.log(arr)
+        fetch.post('/collection/delete', {arr}).then(res =>{
+         wx.showToast({
+           title: "取消收藏",
+           icon: 'loading',
+           duration: 1000
+         })
+           let bookData = { ...this.data.bookData }
+         bookData.isCollect = 0
+         this.setData({
+           bookData: bookData
+         })
+         })
+     
+      }
+    })
+
+  },
+  onShareAppMessage:function(){
+    return{
+      title:this.data.bookData.data.title,
+      path: `/pages/details/details?id=${this.data.bookId}`,
+      imageUrl:this.data.bookData.data.img
+    }
   }
+
+
 })

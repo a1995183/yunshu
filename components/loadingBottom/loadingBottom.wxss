@@ -1,0 +1,49 @@
+/* components/loadingText/loadingBottom.wxss */
+
+.loadmore {
+  margin-top: 40rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: #555;
+}
+
+.loadmore image {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.loadmore text {
+  line-height: 50rpx;
+  height: 50rpx;
+  padding-left: 20rpx;
+}
+
+.no-more {
+  position: relative;
+  line-height: 160rpx;
+  height: 160rpx;
+  text-align: center;
+  background: #f1f1f1;
+  font-size: 14px;
+  color: #9e9e9e;
+}
+
+.no-more text {
+  position: relative;
+  z-index: 998;
+  padding: 0 20rpx;
+  background: #f1f1f1;
+}
+
+.no-more .line {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 0;
+  transform: translate(-50%, -50%);
+  width: 500rpx;
+  height: 1rpx;
+  background: #ccc;
+}

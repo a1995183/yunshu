@@ -1,0 +1,11 @@
+<view>
+  <view wx:if="{{hasMore}}" class='loadmore'>
+    <image src='/static/iconfont/loading.svg'></image>
+    <text>数据正在拼命加载中...</text>
+  </view>
+  <view wx:else="{{!hasMore}}" class='no-more'>
+
+  <text>我是有底线的</text>
+  <text class='line'></text>
+  </view>
+</view>
