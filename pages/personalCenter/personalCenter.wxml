@@ -1,2 +1,22 @@
 <!--pages/personalCenter/personalCenter.wxml-->
-<text>pages/personalCenter/personalCenter.wxml</text>
+<view class='header'>
+<view class='had-top'>
+<image src='{{userinfo.avatarUrl}}'></image>
+<view class='text-name'>
+<text class='name'> {{userinfo.nickName}}</text>
+<text class='text-title'>这家伙很懒，什么也没留下</text>
+</view>
+</view>
+<view class='head-bottom'>
+<!-- <view class='btn btn1'>
+<text>{{myBooks.length}}</text>
+收藏</view> -->
+<navigator  class='btn btn1' url="{{'/pages/MyCollection/MyCollection'}}" >
+<text>{{myBooks.length}}</text>收藏</navigator>
+<view class='btn btn2'><text>4</text>
+关注</view></view>
+
+
+
+</view>
+

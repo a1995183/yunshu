@@ -1,3 +1,4 @@
 {"usingComponents": {
     "wemark": "/components/wemark/wemark/wemark"
-  }}
+  },
+  "navigationBarTitleText": "码上韵书"}

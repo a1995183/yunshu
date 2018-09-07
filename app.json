@@ -6,11 +6,12 @@
     "pages/book/book",
     "pages/personalCenter/personalCenter",
     "pages/myStudy/myStudy",
-    "components/loadingBottom/loadingBottom"
+    "components/loadingBottom/loadingBottom",
+    "pages/MyCollection/MyCollection"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarTitleText": "云书",
+    "navigationBarTitleText": "码上韵书",
     "navigationBarBackgroundColor": "#87ceeb",
     "navigationBarTextStyle": "black"
   },

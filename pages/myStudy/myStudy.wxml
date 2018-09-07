@@ -1,2 +1,49 @@
 <!--pages/myStudy/myStudy.wxml-->
-<text>pages/myStudy/myStudy.wxml</text>
+
+          <view class="main-content">
+  <view class='title-myStudy'></view>   
+                <view class="content-item" wx:for="{{myBooks}}" wx:key="index">
+                <view wx:if="{{item.book==null}}"></view>
+                <view wx:else  >
+                    <view  class="content"  bindtap="" data-id="{{item.book._id}}">  
+                                                                                                        <view class="box-l">
+                          <view class='con-book' >
+                          <image  class="img" src='{{item.book.img}}'></image>  
+                          </view>
+                        </view>
+
+
+                        <view class="box-r">
+                         
+                                <view class=" book-title">{{item.book.title}}</view>   
+                                <view class='lookNum'>书籍
+     {{item.title.index}}/    
+                            {{item.title.total}}章节
+                            </view> 
+                            <view class='prograss'>
+                             <view style='' class='prograssBar'> <view style='width:{iten.book.setTheNum*100}}%; height:100%; background-color:green'></view></view> 
+                            <view class='hadRead'>已看：{{item.book.setTheNum}}%</view>  </view> 
+                            <view class='had-Reads'>
+                          <text class='listTimeLook'>上次看到：{{item.title.title}}</text>
+                          <text class='listTime'>{{item.book.theTime}}</text>
+
+                            </view>
+                                                            <view class='button-item'>
+                                 
+                                <navigator  url="{{'/pages/book/book?id='+item.title._id+'&bookId='+item.title.bookId}}" >
+  <button class='btn  read-go'>继续阅读</button>    </navigator>
+
+
+                                <button class='btn go-detail'   bindtap='jumpBook' data-id="{{item.book._id}}">查看文档</button>    </view>                                            
+                        </view>
+          
+                  </view>
+                </view>
+
+
+              
+
+
+
+              </view>
+         </view>

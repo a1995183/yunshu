@@ -4,7 +4,7 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
@@ -31,13 +31,13 @@
 		"miniprogram": {
 			"current": -1,
 			"list": [
-        {
-          "id": -1,
-          "name": "图书详情",
-          "pathName": "pages/book/book",
-          "query": "id=5b6ca197feeb050664fe88c4&bookId=5b6ca197feeb050664fe88ba"
-        }
-      ]
+				{
+					"id": -1,
+					"name": "图书详情",
+					"pathName": "pages/book/book",
+					"query": "id=5b6ca197feeb050664fe88c4&bookId=5b6ca197feeb050664fe88ba"
+				}
+			]
 		}
 	}
 }

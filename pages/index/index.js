@@ -1,7 +1,7 @@
 //index.js
 //获取应用实例
 import {fetch,login}from "../../utils/util.js"
-const app = getApp()
+const app = getApp()//用途？
 
 Page({
   data: {
@@ -54,6 +54,7 @@ Page({
     return new Promise(resolve=>{     
   fetch.get('/category/books').then(res=>{
     resolve();
+    console.log(res)
     this.setData({
       mainContent:res.data
     })
@@ -89,7 +90,7 @@ this.getAllData().then(()=>{
   },
   jumpBook(event){
     const id = event.currentTarget.dataset.id
-    console.log(id)
+    console.log(event)
     wx.navigateTo({
       url:`/pages/details/details?id=${id}`
     })

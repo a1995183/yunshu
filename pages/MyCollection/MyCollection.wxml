@@ -1,0 +1,24 @@
+<!--pages/personalCenter/personalCenter.wxml-->
+
+    <view class="content-item" wx:for="{{myBooks}}" wx:key="index">
+                <view wx:if="{{item.book==null}}"></view>
+                <view wx:else>
+                    <view class="content"  bindtap="" data-id="{{item.book._id}}">  
+                                                                                                        <view bindtap="jumpBook" data-id="{{item.book._id}}" class="box-l">
+                       
+                          <image  class="img" src='{{item.book.img}}'></image>  
+                                    
+                                <view class=" book-title">{{item.book.title}}</view>
+                        
+                        </view>
+
+                  </view>
+                </view>
+
+
+              
+
+
+
+              </view>
+
