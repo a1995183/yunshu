@@ -3,6 +3,15 @@
 .content-item{
   margin-top:40rpx;
 }
+.loading{
+  width: 250px;
+  height:250px;
+  position: fixed;
+  top:50%;
+  left:50%;
+  margin-left:-125px;
+  margin-top:-125px;
+}
 .content-item .title{
   font-size:16px;
   padding-left:20rpx;
@@ -76,6 +85,8 @@ flex-direction: column;
   width:230rpx;
   height:300rpx;
   float: left;
+    box-shadow:-77px 1px 60px;
+  
 }
 
  .box-r .book-title{

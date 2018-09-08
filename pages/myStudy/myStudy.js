@@ -5,7 +5,8 @@ Page({
 
   data: {
 myBooks:[],
-    bookTitles:[]
+    bookTitles:[],
+    isLoading:false
   },
 
   /**
@@ -13,6 +14,9 @@ myBooks:[],
    */
   onLoad: function (options) {
     // this.getCollectonBooks();
+    this.setData({
+      isLoading:true
+    })
     this.getReadList();
    
   },
@@ -36,7 +40,8 @@ myBooks:[],
         resolve();
         console.log(res)
         this.setData({
-          myBooks: res.data
+          myBooks: res.data,
+          isLoading:false
         })
       
         this.setlooknums() 
@@ -111,8 +116,13 @@ myBooks:[],
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
-  
+  onPullDownRefresh() {//下拉刷新函数
+    this.setData({
+      isLoading: true
+    })
+    this.getReadList();
+      wx.stopPullDownRefresh()//停止刷新
+   
   },
 
   /**

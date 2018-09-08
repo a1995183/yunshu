@@ -8,7 +8,7 @@ Page({
   data: {
     bookNum: 0,
     pn: 1,
-    size: 2,
+    // size: 2,
     myBooks: [],
     userInfo: {}
   },
@@ -51,7 +51,8 @@ Page({
   getCollectonBooks() {
     return new Promise((resolve, reject) => {
       fetch.get('/collection', {
-        pn: this.data.pn, size: this.data.size
+        pn: this.data.pn,
+        //  size: this.data.size
       }).then(res => {
         resolve();
         console.log(res)

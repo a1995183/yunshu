@@ -81,10 +81,13 @@ float: left;
   width:240rpx;
   height:300rpx;
   float: left;
+    box-shadow:-77px 1px 60px;
 }
 
  .box-l .book-title{
   font-size:12px;
+  margin-top:20px;
+
   color:#333;
 
 -webkit-line-clamp:2;

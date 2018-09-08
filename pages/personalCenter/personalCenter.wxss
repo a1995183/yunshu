@@ -55,7 +55,13 @@ font-size: 12px;
   float:right
 }
 
-
+.logo .logo-img{
+  width: 600rpx;
+  height:500rpx;
+  border-radius: 0;
+margin:70rpx;
+position:relative;
+}
 
 
 

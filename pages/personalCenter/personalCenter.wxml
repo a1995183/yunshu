@@ -17,6 +17,8 @@
 关注</view></view>
 
 
-
+<view class='logo'> 
+<image class="logo-img"src="/static/iconfont/logo.png"></image>
+</view>
 </view>
 

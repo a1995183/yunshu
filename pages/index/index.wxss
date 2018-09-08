@@ -40,6 +40,7 @@
   width:230rpx;
   height:300rpx;
   float: left;
+    box-shadow:-77px 1px 60px;  
 }
 
  .box-r .book-title{
