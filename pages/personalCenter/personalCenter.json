@@ -1,1 +1,3 @@
-{"navigationBarTitleText": "个人中心"}
+{"navigationBarTitleText": "个人中心",
+"enablePullDownRefresh": true,
+"onReachBottomDistance": 100}

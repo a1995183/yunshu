@@ -34,7 +34,7 @@
                           <view class="author">
                               <text class="author-l">{{bookItem.author}}</text>
                               <view class="aurhot-r">
-                                    <text class="update-time">两天前</text>
+                                    <text class="update-time">{{bookItem.theTime}}</text>
                                     <text class="category">后端开发</text>
                                     <text class="many">{{bookItem.looknums}}人在看</text>
                               </view>

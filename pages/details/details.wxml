@@ -37,7 +37,7 @@
 共{{bookData.length}}章
 </view>
 </view>
-<view class='catalog-r updata-time'>更新于两天前></view>
+<view class='catalog-r updata-time'>更新于{{bookData.data.theTime}}></view>
 
 <view class="read-btn-wrap">
 <button class='b-btn' bindtap='jumpCatalog'>阅读该书籍</button>

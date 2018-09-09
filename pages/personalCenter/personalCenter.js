@@ -23,7 +23,6 @@ Page({
       this.setData({
         userinfo:data.userInfo
       })
-       console.log(data.userInfo)
     }
   })
   },
@@ -33,7 +32,7 @@ getColnNum(){
       pn:this.data.pn,size:this.data.size
     }).then(res=>{
       resolve();
-      console.log(res)
+  
     this.setData({
     })
     }).catch(err=>{
@@ -48,7 +47,6 @@ getColnNum(){
         // size: this.data.size
       }).then(res => {
         resolve();
-        console.log(res)
         this.setData({
           myBooks: res.data
         })
@@ -88,8 +86,10 @@ getColnNum(){
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
-  
+  onPullDownRefresh() {//下拉刷新函数
+    this.getCollectonBooks();
+    wx.stopPullDownRefresh()//停止刷新
+
   },
 
   /**

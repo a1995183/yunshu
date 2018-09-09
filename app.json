@@ -11,14 +11,14 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarTitleText": "码上韵书",
+    "navigationBarTitleText": "黑龙云书",
     "navigationBarBackgroundColor": "#87ceeb",
     "navigationBarTextStyle": "black"
   },
   "tabBar":{
     "list":[
       {"pagePath":"pages/index/index",
-    "text":"云书",
+    "text":"首页",
     "iconPath":"/static/icon/home.png",
     "selectedIconPath":"/static/icon/home_active.png"},
    {

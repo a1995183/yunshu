@@ -54,11 +54,41 @@ Page({
     return new Promise(resolve=>{     
   fetch.get('/category/books').then(res=>{
     resolve();
-    console.log(res)
     this.setData({
       mainContent:res.data
     })
+    this.setSetTimes();
   })
+    })
+  },
+  setSetTimes() {
+    let mainContent = this.data.mainContent;
+    mainContent.map((item, index) => {
+     return item.books.map((itembook,index)=>{
+       var date1 = new Date(itembook.createTime);
+        var date2 = new Date();
+        var time1 = date1.getTime();
+        var tim2 = date2.getTime();
+        var thidayTime = "秒前";
+        var theTime = parseInt((tim2 - time1) / 1000)
+        if (theTime > 60) {
+          theTime = parseInt(theTime / 60)
+          thidayTime = "分钟前"
+          if (theTime > 60) {
+            theTime = parseInt(theTime / 60)
+            thidayTime = "小时前"
+            if (theTime > 24) {
+              theTime = parseInt(theTime / 24)
+              thidayTime = "天前"
+            }
+          }
+        }
+        itembook.theTime = theTime + thidayTime
+       
+        return this.setData({
+          mainContent: mainContent
+        })
+      })
     })
   },
   getMoreContent(){
@@ -82,6 +112,7 @@ this.getAllData().then(()=>{
        this.setData({
          mainContent:newArr
        })
+        this.setSetTimes();
        if(res.data.length<2){
          this.setData({hasMore:false})
        }
@@ -90,7 +121,6 @@ this.getAllData().then(()=>{
   },
   jumpBook(event){
     const id = event.currentTarget.dataset.id
-    console.log(event)
     wx.navigateTo({
       url:`/pages/details/details?id=${id}`
     })

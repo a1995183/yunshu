@@ -45,7 +45,6 @@ const login=()=>{
         code:res.code,
         appid:"wxf270f37749a87d1c",       secret:"8a0f8e11654cef4332df114c0d40c91d"
       }).then(res=>{
-        console.log(res)
       })
     }
   })

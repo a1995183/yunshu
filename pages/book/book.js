@@ -31,6 +31,12 @@ Page({
           isLoading:false,
           index: res.data.article.index
         })
+        wx: wx.setNavigationBarTitle({
+          title: this.data.title,
+          success: function (res) { },
+          fail: function (res) { },
+          complete: function (res) { },
+        })
       }).catch(err=>{
         this.setData({
           isLoading:false

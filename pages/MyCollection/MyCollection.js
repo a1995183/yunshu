@@ -37,7 +37,8 @@ Page({
   getColnNum() {
     return new Promise((resolve, reject) => {
       fetch.get('/collection', {
-        pn: this.data.pn, size: this.data.size
+        pn: this.data.pn, 
+        size: this.data.size
       }).then(res => {
         resolve();
         console.log(res)
